@@ -18,8 +18,6 @@ cd AethirCheckerCLI-linux-as
 # Install the dependencies
 sudo ./install.sh
 
-# Start a new screen session and run the CLI
-screen -S Ath -d -m sudo ./AethirCheckerCLI
-
-# Inform the user
-echo "AethirCheckerCLI is now running in a screen session named 'Ath'. You can attach to this session using: screen -r Ath"
+# Start a new screen session and attach to it
+screen -S Ath -d -m bash -c "sudo ./AethirCheckerCLI"
+screen -r Ath
